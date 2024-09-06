@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f1c40f; /* Golden Yellow text */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Fullscreen Moon Container */
+#moon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind other content */
+}
+
+/* Container Styles */
+.container {
+    background: #333; /* Dark grey background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    position: relative; /* Ensure this is above the moon */
+    z-index: 1;
+    margin: 0 auto; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Styles */
+h1 {
+    color: #f1c40f; /* Golden Yellow */
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #f39c12; /* Lighter Golden Yellow */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #f1c40f; /* Golden Yellow */
+}
+
+input[type="file"] {
+    border: 2px solid #f1c40f; /* Golden Yellow border */
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    background-color: #333; /* Dark grey background for input */
+    color: #f1c40f; /* Golden Yellow text */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="file"]:focus {
+    border-color: #f39c12; /* Lighter Golden Yellow */
+    background-color: #444; /* Slightly lighter dark grey */
+}
+
+/* Button Styles */
+button {
+    background-color: #f1c40f; /* Golden Yellow */
+    color: #1a1a1a; /* Dark text */
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    background-color: #f39c12; /* Lighter Golden Yellow */
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Advanced Effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

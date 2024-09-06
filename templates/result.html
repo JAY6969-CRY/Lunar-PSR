@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Image</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Enhanced Image Result</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+        </nav>
+    </header>
+    <main>
+        <section id="result-section">
+            <h2>Original vs Enhanced</h2>
+            <div class="images">
+                <div>
+                    <h3>Original Image</h3>
+                    <img src="{{ original }}" alt="Original Image">
+                </div>
+                <div>
+                    <h3>Enhanced Image</h3>
+                    <img src="{{ processed }}" alt="Processed Image">
+                </div>
+            </div>
+            <a href="/download/{{ processed.split('/')[-1] }}" class="download-btn">Download Enhanced Image</a>
+        </section>
+    </main>
+</body>
+</html>
